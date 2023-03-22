@@ -1,0 +1,14 @@
+[
+    {
+        "empresa":"EBAC",
+        "endereco":"Av. 9 de Julho",
+        "pais":"Brasil",
+        "numero":"23",
+        "cidade":"Jundiai",
+        "estado":"São Paulo",
+        "cep":"13290-000",
+        "telefone":"1188921696",
+        "email":"teste@teste.com.br",
+        "comentario":"comentario"
+    }
+]

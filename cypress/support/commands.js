@@ -31,3 +31,15 @@ Cypress.Commands.add('login', (usuario, senha) => {
     cy.get('.woocommerce-form > .button').click()
 });
 
+Cypress.Commands.add('Cadastro', (email, senha) => {
+    cy.get('#reg_email').type(email)
+    cy.get('#reg_password').type(senha,{log: false})
+    cy.get(':nth-child(4) > .button').click()
+})
+
+Cypress.Commands.add('addProdutos', (tamanho, cor,  quantidade) => {
+    cy.get('.button-variable-item-'+ tamanho).click()
+    cy.get('.button-variable-item-'+ cor).click()
+    cy.get('.input-text').clear().type(quantidade)
+    cy.get('.single_add_to_cart_button').click()
+})
