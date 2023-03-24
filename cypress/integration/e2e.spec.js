@@ -40,6 +40,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('.post-3702 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
         cy.addProdutos('S','Gray',2)
         cy.get('.single_add_to_cart_button').click()
+        cy.get('.woocommerce-message').should('contain','foram adicionados no seu carrinho.')
+        
         
         
         // Validar carrinho e seguir com check-out
@@ -61,6 +63,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         )
         cy.get('#terms').click()
         cy.get('#place_order').click()
+        cy.get('.woocommerce-notice').should ('contain', 'Obrigado. Seu pedido foi recebido.')
 
     });
 })
